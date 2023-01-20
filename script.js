@@ -12,13 +12,20 @@ form.addEventListener('change',save)
 function add(){
     
     const today = new Date().toLocaleDateString('pt-br').slice(0,5)
-    alert(today)
+    
     if(nlwSetup.dayExists(today)){
-        alert('Dia já incluso 💔')
+        swal({
+            title:'Dia já incluso',
+            icon:'warning'
+        })
         return
     }
 
-    alert("Adicionado com sucesso 💖")
+    swal({
+        title:'Dia incluido com sucesso!',
+        icon:'success',
+        button:'Vamos para mais um dia!'
+    })
     nlwSetup.addDay(today)
 }
 
