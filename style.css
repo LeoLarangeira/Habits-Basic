@@ -78,12 +78,16 @@ input{
     background-color:#18181B;
     border-radius:8px;
     border:2px solid #27272A;
+    -webkit-transition: all 0.50s;
+
+
 }
 
 input:checked{
     background-color:#8B5CF6;
     border-radius:8px;
     border:2px solid #A78BFA;
+    -webkit-transition: all 0.50s;
 }
 
 
@@ -103,6 +107,10 @@ button{
     font-weight:600;
     font-size:16px;
     line-height:125%;
+}
+button:hover, button:focus{
+    box-shadow:0 0.5em 0.5em -0,4em ;
+    transform: translateY(-0.25em);
 }
 
 @media(max-width:570px){
